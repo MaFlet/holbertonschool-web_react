@@ -21,7 +21,11 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: "./dist"
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    port: 8000,
+    open: true,
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
