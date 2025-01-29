@@ -39,6 +39,14 @@ const director1: Directors = {
     contract: true
 };
 
+interface printTeacherFunction {
+    (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+    return `${firstName.charAt(0)}. ${lastName}`;
+};
+
 // Type checking examples
 function printTeacherInfo(teacher: Teacher): void {
     console.log(`
