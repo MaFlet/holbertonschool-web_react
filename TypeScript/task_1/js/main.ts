@@ -25,6 +25,20 @@ const teacher2: Teacher = {
     certifications: ["Math", "Physics"] // Optional different property
 };
 
+// Extending to Director inheriting Teacher attributes
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
+const director1: Directors = {
+    firstName: "John",
+    lastName: "Smith",
+    location: "New York",
+    fullTimeEmployee: true,
+    numberOfReports: 17,
+    contract: true
+};
+
 // Type checking examples
 function printTeacherInfo(teacher: Teacher): void {
     console.log(`
